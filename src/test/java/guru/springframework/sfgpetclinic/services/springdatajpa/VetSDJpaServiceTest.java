@@ -17,11 +17,11 @@ class VetSDJpaServiceTest {
     VetRepository vetRepository;
 
     @InjectMocks
-    VetSDJpaService vetSDJpaService;
+    VetSDJpaService service;
 
     @Test
     void deleteById() {
-        vetSDJpaService.deleteById(1L);
+        service.deleteById(1L);
         verify(vetRepository, times(1)).deleteById(1L);
     }
 }
